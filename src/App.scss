@@ -1,0 +1,121 @@
+body {
+  font-family: "Nunito Sans", sans-serif !important;
+  .darkbtn {
+    cursor: pointer;
+  }
+  .dropdown-menu {
+    width: 200px;
+  }
+  #countrie {
+    min-height: calc(100vh - 78px);
+  }
+  #countries {
+    min-height: calc(100vh - 78px);
+  }
+  #search {
+    .btn {
+      height: 68px;
+      background-color: white !important;
+      border: unset !important;
+      color: gray;
+      font-weight: bold;
+      width: 200px;
+    }
+  }
+}
+
+#light {
+  background-color: white !important;
+  //   countries
+  #countries {
+    .gray {
+      font-weight: 600;
+      color: gray;
+    }
+  }
+  #countrie {
+    p {
+      margin-bottom: 5px;
+    }
+  }
+  //   Search
+  #search {
+    .form-control {
+      height: 100%;
+      color: gray !important;
+      font-weight: bold;
+    }
+    .btn {
+      background-color: white !important;
+      color: gray;
+    }
+    .zom {
+      color: gray;
+    }
+    .dropdown-item {
+      color: gray;
+      margin-top: 5px;
+      font-weight: bold;
+    }
+    .dropdown-item:focus {
+      background-color: unset;
+    }
+    .form-control:focus {
+      box-shadow: unset !important;
+    }
+  }
+}
+#dark {
+  background-color: hsl(207, 26%, 17%) !important;
+  color: hsl(0, 0%, 100%) !important;
+  .btn {
+    color: white !important;
+    background-color: hsl(209, 23%, 22%) !important;
+  }
+  #search {
+    .btn {
+      color: white !important;
+      background-color: hsl(209, 23%, 22%) !important;
+    }
+    form {
+      background-color: hsl(209, 23%, 22%) !important;
+    }
+    .form-control {
+      height: 100%;
+      color: white !important;
+      background-color: hsl(209, 23%, 22%) !important;
+    }
+    .zom {
+      color: white !important;
+    }
+    .dropdown-menu {
+      background-color: hsl(209, 23%, 22%) !important;
+    }
+    .dropdown-item {
+      color: white !important;
+    }
+    .dropdown-item:focus {
+      background-color: unset;
+    }
+    .form-control:focus {
+      box-shadow: unset !important;
+    }
+  }
+  #countrie {
+    background-color: hsl(207, 26%, 17%) !important;
+  }
+  #countries {
+    background-color: hsl(207, 26%, 17%) !important;
+    .gray {
+      font-weight: 600;
+      color: white;
+    }
+    .card {
+      background-color: hsl(209, 23%, 22%) !important;
+    }
+  }
+  #nav {
+    background-color: hsl(209, 23%, 22%) !important;
+    color: white;
+  }
+}

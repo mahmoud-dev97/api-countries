@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.scss";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Container } from "react-bootstrap";
+import NavBar from "./components/NavBar";
+import Countries from "./components/Countries";
+import Countrie from "./components/Countrie";
+import { Route, Routes } from "react-router-dom";
+import { useState, useEffect } from "react";
 function App() {
+  const [dark, setDark] = useState(
+    localStorage.getItem("dark-mode") === "true"
+  );
+  useEffect(() => {
+    localStorage.setItem("dark-mode", dark);
+  }, [dark]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id={dark ? "dark" : "light"}>
+      <div id="nav" className="shadow-sm">
+        <NavBar dark={dark} setDark={setDark} />
+      </div>
+      <Container>
+        <Routes>
+          <Route path="/" element={<Countries />} />
+          <Route path="/name/:name" element={<Countrie />} />
+        </Routes>
+      </Container>
     </div>
   );
 }
